@@ -16,7 +16,7 @@ We warmly welcome users to visit our application at http://95.179.227.12:5000. D
 For users who failed in installing neo4j can just skip this software and use app_without_neo4.py instead of app.py as the applicatoin.
 
 ```
-git clone https://github.com/shiyu-wangbyte/web-GPCRs.git
+git clone https://github.com/alphamol-basel/GPCR-GPT.git
 cd web-GPCRs
 ```
 
