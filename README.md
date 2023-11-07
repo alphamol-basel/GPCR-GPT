@@ -6,6 +6,10 @@ Our code is only open source for academic users.
 
 ## INTRODUCTION
 
+![image](static/drawing-1.png)
+<p align="center">Figure 0. Dataflow.</p>
+
+
 This project shows the possibility of using the Knowledge graph to improve the ability to answer questions in the large language model. We try to use language models to automatically extract the information of relational triples in literature, and then convert these relational triples into Knowledge graph and use them to improve the ability of big language models to answer user questions in professional fields.
 In this study, we chose G protein-coupled receptor, an important Protein superfamily. Use ChatGPT (https://openai.com/blog/chatgpt) to process literature abstracts in the PUBMED database (https://pubmed.ncbi.nlm.nih.gov/) and transform these unstructured text into structured relational triplets. In addition, we also collect GPCR related knowledge from other structured databases and convert this knowledge into relational triplet format. Then, all relational triples are embedded into the same Knowledge graph. Finally, the Knowledge graph was used to improve the ability of these language models to answer questions related to GPCR. When our website receives users' questions, we will first judge whether our Knowledge graph contains information of interest to users through keyword matching. If so, the graph will only answer the user's questions. If not, ChatGPT will answer the user's questions.
 
@@ -49,3 +53,8 @@ Please ensure the 5000 port in you machine is available.
 
 ![image](static/figure_2.svg)
 <p align="center">Figure 2. A demo of knowledge graph.</p>
+
+## contact
+Shuguang Yuan
+
+shuguang.yuan@alphamol.com
