@@ -4,7 +4,7 @@
 
 Our code is only open source for academic users.
 
-## INTRODUCTION
+## introduction
 
 ![image](static/drawing-1.png)
 <p align="center">Figure 0. Dataflow.</p>
