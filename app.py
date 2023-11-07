@@ -30,7 +30,7 @@ matcher_n = NodeMatcher(graph)
 matcher_r = RelationshipMatcher(graph)
 
 #use your own openai api
-openai.api_key = "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"
+openai.api_key = "***********************************"
 
 with open("static/name_syno.json") as json_file:
     name_syno_dic=json.load(json_file)
