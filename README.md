@@ -2,7 +2,7 @@
 
 # GPCR-GPT
 
-Our code is only open source for academic users.
+Our code is under Attribution-NonCommercial-ShareAlike 4.0 International license.
 
 ## introduction
 
