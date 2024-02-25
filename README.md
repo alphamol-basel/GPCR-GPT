@@ -9,6 +9,7 @@ Our code is under Attribution-NonCommercial-ShareAlike 4.0 International license
 [video]:static/video.png "video tutorial"
 --->
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/GtlcOowVptU/0.jpg)](https://www.youtube.com/watch?v=GtlcOowVptU "Unity Snake Game")
 
 ## INTRODUCTION
 
