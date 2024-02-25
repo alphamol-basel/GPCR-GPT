@@ -27,7 +27,7 @@ cd GPCR-GPT
 install python package
 
 ```
-pip install json==2.0.9 pandas==2.0.3 flask==1.1.2 py2neo==2021.2.3
+pip install json==2.0.9 pandas==2.0.3 flask==2.1.3 py2neo==2021.2.4 openai==0.28.0 flask_login==0.6.3 flask_sqlalchemy==2.5.1
 ```
 
 Or install python package with anaconda
