@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GPCR knowledge graph</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/fullpage.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.carousel.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/templatemo-style.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+
+    </head>
+    
+    <body>
+    <div id="video">
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                  <!-- 标题 -->
+                    <a href="#" id="logo" title="Elegance by TemplateMo">
+                      GPCR knowledge graph
+                    </a>
+                    <!-- 导航 -->
+                    <div class="navigation-row">
+                      <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                        <nav id="navigation">
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                                  <li ><a href="{{ url_for('home') }}">GPCR-GPT</a></li>
+                                  <li><a href="{{ url_for('gpcrkg') }}">GPCR-KG</a></li>
+                                  <li ><a href="{{ url_for('tutorial') }}">Tutorial</a></li>
+                                  <li><a href="{{ url_for('contact') }}">Contact me</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% if get_flashed_messages() %}
+        <h4>
+          <br><br><br>
+          {{ get_flashed_messages() }}
+        </h4>
+        {% endif %}
+
+        <div id="fullpage" class="fullpage-default">
+            <div class="section animated-row" data-section="slide04">
+                <form method="POST" action="/register">
+                    Email<br>
+                    <input type="text" name="email" required><br><br>
+                    Password<br>
+                    <!-- 密码输入框的 type 属性使用 password，会将输入值显示为圆点 -->
+                    <input type="password" name="password" required><br><br>
+                    Confim password<br>
+                    <input type="password" name="password2" required><br><br>
+                    Affiliation<br>
+                    <input type="text" name="affiliation" required><br><br>
+                    <input class="btn" type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>  
+
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/fullpage.min.js"></script>
+    <script src="../static/js/scrolloverflow.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/jquery.inview.min.js"></script>
+    <script src="../static/js/form.js"></script>
+    <script src="../static/js/custom.js"></script>
+</body>
+</html>

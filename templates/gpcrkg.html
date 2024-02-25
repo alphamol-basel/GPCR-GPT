@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GPCR knowledge graph</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/fullpage.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.carousel.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/templatemo-style.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+
+    </head>
+    
+    <body>
+    <div id="video">
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                  <!-- 标题 -->
+                    <a href="#" id="logo" title="Elegance by TemplateMo">
+                      GPCR knowledge graph
+                    </a>
+                    <!-- 导航 -->
+                    <div class="navigation-row">
+                      <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                        <nav id="navigation">
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                                  <li ><a href="{{ url_for('home') }}">GPCR-GPT</a></li>
+                                  <li data-menuanchor="slide01" class="active"><a href="{{ url_for('gpcrkg') }}">GPCR-KG</a></li>
+                                  <li ><a href="{{ url_for('tutorial') }}">Tutorial</a></li>
+                                  <li><a href="{{ url_for('contact') }}">Contact me</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% if not output %}
+        <div id="fullpage" class="fullpage-default">
+            <div class="section animated-row" data-section="slide04">
+              <form method="POST" action="/gpcrkg">
+                Type a receptor:<br>
+                <input list="gpcr-proteins" id="second" name="second" required><br><br>
+                <datalist id="gpcr-proteins">
+                </datalist>
+                Choose a relation:<br>
+                <select name="selectList" size="1">
+                  <option>--</option>
+                  <option>Effector</option>
+                  <option>Family</option>
+                  <option>Functions</option>
+                  <option>G proteins</option>
+                  <option>Gtex_tissue</option>
+                  <option>HPA_tissue_high</option>
+                  <option>HPA_tissue_low</option>
+                  <option>HPA_tissue_medium</option>
+                  <option>Pdb</option>
+                  <option>Subfamily</option>
+                  <option>diseases</option>
+                  <option>drugs</option>
+                  <option>endogenous ligands</option>
+                </select><br><br>
+                <input class="btn" type="submit" name="submit" value="Search">
+              </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if output %}
+    <br><br><br><br>
+    <h2>Searching result</h2>
+    <pre>{{ output|safe }}</pre>
+    {% endif %}
+
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/fullpage.min.js"></script>
+    <script src="../static/js/scrolloverflow.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/jquery.inview.min.js"></script>
+    <script src="../static/js/form.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script>
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '../static/jsonp.js?callback=callback';
+      document.head.appendChild(script);
+      function callback(res) {
+        var strHtml = "";
+        for(var i = 0; i < res.length; i++) {
+          strHtml += "<option value=" + res[i] + "></option>"
+        }
+        document.getElementById("gpcr-proteins").innerHTML=strHtml
+      }
+    </script>  
+</body>
+</html>
