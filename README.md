@@ -4,13 +4,8 @@
 
 Our code is under Attribution-NonCommercial-ShareAlike 4.0 International license.
 
-<!---
-[![video]](https://www.bilibili.com/video/BV1Ez4y1A7fZ/?spm_id_from=333.999.0.0&vd_source=b5bc1ef0479d0aac91bd9e28fd715a4f)  
-[video]:static/video.png "video tutorial"
---->
 
-[![IMAGE ALT TEXT](static/video.png)](https://www.bilibili.com/video/BV1Ez4y1A7fZ/?spm_id_from=333.999.0.0&vd_source=b5bc1ef0479d0aac91bd9e28fd715a4f "Unity Snake Game")
-[![IMAGE ALT TEXT](static/video.png)](https://www.youtube.com/watch?v=GtlcOowVptU "video tutorial")
+[![IMAGE ALT TEXT](static/video.png)](https://www.bilibili.com/video/BV1Ez4y1A7fZ/?spm_id_from=333.999.0.0&vd_source=b5bc1ef0479d0aac91bd9e28fd715a4f "video tutorial")
 
 ## INTRODUCTION
 
